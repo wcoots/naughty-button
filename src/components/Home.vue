@@ -1,17 +1,17 @@
 <template>
-  <span v-if="clicked === false">
-      <button
-        class="button"
-        v-bind:style="computedPosition"
-        @mouseover="mouseOver"
-        @mouseleave="mouseLeave"
-        @click="click">
-          {{ button_text }}
-      </button>
-  </span>
-  <span v-else>
-    <p>nice</p>
-  </span>
+    <span v-if="clicked === false">
+        <button
+            class="button"
+            v-bind:style="computedPosition"
+            @mouseover="mouseOver"
+            @mouseleave="mouseLeave"
+            @click="click">
+                {{ button_text }}
+        </button>
+    </span>
+    <span v-else>
+        <p>nice</p>
+	</span>
 
 </template>
 
@@ -19,12 +19,12 @@
 import { declareInitialValues, computedPosition, mouseOver, mouseLeave, click } from '../hooks'
 
 export default {
-  name: 'Home',
-  setup() {
-    const { clicked, button_text } = declareInitialValues()
+    name: 'Home',
+    setup() {
+        const { clicked, button_text } = declareInitialValues()
 
-    return { clicked, button_text, computedPosition, mouseOver, mouseLeave, click }
-  },
+        return { clicked, button_text, computedPosition, mouseOver, mouseLeave, click }
+    },
 }
 </script>
 
