@@ -3,8 +3,9 @@
       <button
         class="button"
         v-bind:style="computedPosition"
-        @mouseover="changePostion"
-        @click="clickButton">
+        @mouseover="mouseOver"
+        @mouseleave="mouseLeave"
+        @click="click">
           Click me
       </button>
   </span>
@@ -23,6 +24,7 @@ export default {
   data() {
     return {
       clicked: false,
+      mouse_over: false,
       left: 100,
       top: 100,
       max_height: 0,
@@ -36,7 +38,7 @@ export default {
       document.body.offsetWidth,
       document.documentElement.offsetWidth,
       document.documentElement.clientWidth
-    )
+    ) - 50
 
     this.max_height = Math.max(
       document.body.scrollHeight,
@@ -44,7 +46,7 @@ export default {
       document.body.offsetHeight,
       document.documentElement.offsetHeight,
       document.documentElement.clientHeight
-    )
+    ) - 50
   },
   computed: {
     computedPosition() {
@@ -55,13 +57,19 @@ export default {
     }
   },
   methods: {
-    changePostion() {
+    mouseOver() {
+      this.mouse_over = true
       this.left = `${Math.round(Math.random() * this.max_width)}px`
       this.top = `${Math.round(Math.random() * this.max_height)}px`
     },
-    clickButton() {
-      this.clicked = true
-    }
+    click() {
+      if (this.mouse_over) {
+        this.clicked = true
+      }
+    },
+    mouseLeave() {
+      this.mouse_over = false
+    },
   }
 }
 </script>
