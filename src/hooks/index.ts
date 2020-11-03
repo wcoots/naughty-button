@@ -22,10 +22,6 @@ const max_height: Ref<number> = ref(0)
 const max_width: Ref<number> = ref(0)
 
 export const declareInitialValues = () => {
-    return { clicked, button_text }
-}
-
-export const getPageDimensions = () => {
     max_height.value = Math.max(
         document.body.scrollHeight,
         document.documentElement.scrollHeight,
@@ -41,6 +37,8 @@ export const getPageDimensions = () => {
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
     ) - 100
+
+    return { clicked, button_text }
 }
 
 export const computedPosition = computed(() => {

@@ -16,13 +16,12 @@
 </template>
 
 <script lang="ts">
-import { declareInitialValues, getPageDimensions, computedPosition, mouseOver, mouseLeave, click } from '../hooks'
+import { declareInitialValues, computedPosition, mouseOver, mouseLeave, click } from '../hooks'
 
 export default {
   name: 'Home',
   setup() {
     const { clicked, button_text } = declareInitialValues()
-    getPageDimensions()
 
     return { clicked, button_text, computedPosition, mouseOver, mouseLeave, click }
   },
