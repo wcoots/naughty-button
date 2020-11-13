@@ -11,3 +11,9 @@
    ```
  
 ### Version 2
+- [@Midnight-Conqueror](https://github.com/Midnight-Conqueror):
+  ```js
+  const button = document.getElementsByClassName('button')[0]
+  button.dispatchEvent(new Event('mouseover'))
+  button.dispatchEvent(new Event('click'))
+  ````
