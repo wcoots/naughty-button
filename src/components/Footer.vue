@@ -6,14 +6,13 @@
 
 <script lang="ts">
 import { ref, Ref } from 'vue'
-// @ts-ignore
+// @ts-expect-error
 import pjson from '../../package.json'
 
 export default {
     name: 'Footer',
     setup() {
         const version: Ref<string> = ref(pjson.version)
-
         return { version }
     }
 }
