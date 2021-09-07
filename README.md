@@ -1,4 +1,4 @@
-# [Naughty Button](https://naughty-bhaskara-fdbe8e.netlify.app)
+# [Naughty Button](https://6137503cd8faac000754dc56--naughty-bhaskara-fdbe8e.netlify.app/)
 
 ### Version 1
  - [@Kritzware](https://github.com/kritzware):
