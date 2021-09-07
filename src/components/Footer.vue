@@ -1,19 +1,18 @@
 <template>
     <span class="footer">
-        <a href="https://github.com/WillCooter/naughty-button">v{{ version }}</a>
+        <a :href="repository">v{{ version }}</a>
     </span>
 </template>
 
 <script lang="ts">
-import { ref, Ref } from 'vue'
 // @ts-expect-error
 import pjson from '../../package.json'
 
 export default {
     name: 'Footer',
     setup() {
-        const version: Ref<string> = ref(pjson.version)
-        return { version }
+        const { version, repository } = pjson
+        return { version, repository }
     }
 }
 </script>

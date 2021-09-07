@@ -89,5 +89,12 @@ export function useHome(): UseHome {
         }
     }
 
-    return { buttonIsClicked, buttonText, buttonStyles, mouseOverButton, mouseLeaveButton, clickButton }
+    return {
+        buttonIsClicked,
+        buttonText,
+        buttonStyles,
+        mouseOverButton,
+        mouseLeaveButton,
+        clickButton
+    }
 }

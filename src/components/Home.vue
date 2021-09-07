@@ -9,9 +9,8 @@
         </button>
     </span>
     <span v-else>
-        <p>nice</p>
-	</span>
-
+        <p>nicely done</p>
+    </span>
 </template>
 
 <script lang="ts">
