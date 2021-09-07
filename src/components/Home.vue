@@ -1,12 +1,11 @@
 <template>
-    <span v-if="clicked === false">
+    <span v-if="buttonIsClicked !== true">
         <button
-            class="button"
-            v-bind:style="computedPosition"
-            @mouseover="mouseOver"
-            @mouseleave="mouseLeave"
-            @click="click">
-                {{ button_text }}
+            v-bind:style="buttonStyles"
+            @mouseover="mouseOverButton"
+            @mouseleave="mouseLeaveButton"
+            @click="clickButton">
+                {{ buttonText }}
         </button>
     </span>
     <span v-else>
@@ -16,34 +15,12 @@
 </template>
 
 <script lang="ts">
-import { declareInitialValues, computedPosition, mouseOver, mouseLeave, click } from '../hooks'
+import { useHome } from '../composition/useHome'
 
 export default {
     name: 'Home',
     setup() {
-        const { clicked, button_text } = declareInitialValues()
-
-        return { clicked, button_text, computedPosition, mouseOver, mouseLeave, click }
+        return useHome()
     },
 }
 </script>
-
-<style scoped>
-.button {
-    height: auto;
-    width: 100px;
-    float: left;
-    display: block;
-    position: absolute;
-    font-weight: bold;
-    color: #082514;
-    background-color: #7a9b7c;
-    border-left: solid #186438 2px;
-    border-right: solid #186438 2px;
-    border-bottom: solid #186438 2px;
-    border-radius: 25px;
-    margin-bottom: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-</style>
