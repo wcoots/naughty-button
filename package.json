@@ -1,6 +1,6 @@
 {
   "name": "naughty-button",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "repository": "https://github.com/WillCooter/naughty-button",
   "scripts": {
     "dev": "vite",

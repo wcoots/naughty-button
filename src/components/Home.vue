@@ -1,16 +1,16 @@
 <template>
-    <span v-if="buttonIsClicked !== true">
-        <button
+    <div v-if="buttonIsClicked !== true">
+        <div
             v-bind:style="buttonStyles"
             @mouseover="mouseOverButton"
             @mouseleave="mouseLeaveButton"
             @click="clickButton">
                 {{ buttonText }}
-        </button>
-    </span>
-    <span v-else>
+        </div>
+    </div>
+    <div v-else>
         <p>nicely done</p>
-    </span>
+    </div>
 </template>
 
 <script lang="ts">

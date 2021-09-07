@@ -20,16 +20,13 @@ const buttonDefaultStyles = {
     float: 'left',
     display: 'block',
     position: 'absolute',
-    'font-weight': 'bold',
     color: '#082514',
+    'font-weight': 'bold',
     'background-color': '#7a9b7c',
-    'border-left': 'solid #186438 2px',
-    'border-right': 'solid #186438 2px',
-    'border-bottom': 'solid #186438 2px',
+    'border': 'solid #186438 2px',
     'border-radius': '25px',
     'margin-bottom': '50px',
-    'padding-top': '10px',
-    'padding-bottom': '10px',
+    'padding': '10px',
 }
 
 interface UseHome {

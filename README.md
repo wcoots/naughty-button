@@ -18,5 +18,13 @@
   button.dispatchEvent(new Event('click'))
   ````
 
-### [v0.2.0](https://naughty-bhaskara-fdbe8e.netlify.app/)
+### [v0.2.0](https://613753c62b4abc0008996f92--naughty-bhaskara-fdbe8e.netlify.app/)
+- [@Midnight-Conqueror](https://github.com/Midnight-Conqueror):
+  ```js
+  const button = document.getElementsByTagName('button')[0]
+  button.dispatchEvent(new Event('mouseover'))
+  button.dispatchEvent(new Event('click'))
+  ````
+
+### [v0.3.0](https://naughty-bhaskara-fdbe8e.netlify.app/)
 - Yet to be clicked...
